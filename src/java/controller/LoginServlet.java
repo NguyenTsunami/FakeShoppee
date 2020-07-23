@@ -117,9 +117,9 @@ public class LoginServlet extends HttpServlet {
             Cookie cremember = new Cookie("rem", rem);
             //-set life time for cookie-
             if (rem != null) {
-                cuser.setMaxAge(60 * 60 * 24);
-                cpass.setMaxAge(60 * 60 * 24);
-                cremember.setMaxAge(60 * 60 * 24);
+                cuser.setMaxAge(1000 * 60 * 60 * 24);
+                cpass.setMaxAge(1000 * 60 * 60 * 24);
+                cremember.setMaxAge(1000 * 60 * 60 * 24);
             } else {
                 cuser.setMaxAge(0);
                 cpass.setMaxAge(0);

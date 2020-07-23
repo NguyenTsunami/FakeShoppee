@@ -204,6 +204,12 @@
                     %>
 
                     <jsp:include page="oncart.jsp" />
+                    
+                    <%
+                    } else if (request.getParameter("service").equals("checkout")) {
+                    %>
+
+                    <jsp:include page="checkout.jsp" />
 
                     <%
                         }

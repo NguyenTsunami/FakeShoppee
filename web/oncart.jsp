@@ -39,13 +39,14 @@
                         <div class="d-inline col-1 align-self-center text-center"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></div>
                     </div>
                     <hr><hr>
-                    <form class="row">
+                    <form class="row" action="checkout" method="post">
+                        <input type="hidden" name="orderID" value="${order.id}">
                         <div class="col-9">
                             <div class="row">
                                 <h6 class="col-5 pl-5">Payment Method: </h6>
                                 <select name="cardID" class="col-6">
-                                    <c:forEach items="${sessionScope.bankaccList}" var="card">
-                                        <option value="${card.id}">${card.bank} | ${card.holder} | ${card.number}</option>
+                                    <c:forEach items="${sessionScope.bankaccList}" var="card" varStatus="loop">
+                                        <option value="${card.id}" ${loop.index==0?"selected":""}>${card.bank} | ${card.holder} | ${card.number}</option>
                                     </c:forEach>
                                 </select>
                             </div>
@@ -53,8 +54,8 @@
                             <div class="row">
                                 <h6 class="col-5 pl-5">Your Address: </h6>
                                 <select name="addressID" class="col-6">
-                                    <c:forEach items="${sessionScope.addressList}" var="address">
-                                        <option value="${address.id}">${address} | ${address.phone}</option>
+                                    <c:forEach items="${sessionScope.addressList}" var="address" varStatus="loop">
+                                        <option value="${address.id}" ${loop.index==0?"selected":""}>${address} | ${address.phone}</option>
                                     </c:forEach>
                                 </select>
                             </div>

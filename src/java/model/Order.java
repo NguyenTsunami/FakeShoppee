@@ -18,14 +18,14 @@ public class Order {
     String date;
     int quantity;
     String state;
-    Card card;
+    BankAcc card;
     Address address;
     String img;
 
     public Order() {
     }
 
-    public Order(int id, Product product, String date, int quantity, String state, Card card, Address address, String img) {
+    public Order(int id, Product product, String date, int quantity, String state, BankAcc card, Address address, String img) {
         this.id = id;
         this.product = product;
         this.date = date;
@@ -84,11 +84,11 @@ public class Order {
         this.state = state;
     }
 
-    public Card getCard() {
+    public BankAcc getCard() {
         return card;
     }
 
-    public void setCard(Card card) {
+    public void setCard(BankAcc card) {
         this.card = card;
     }
 

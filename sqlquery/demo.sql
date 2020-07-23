@@ -25,7 +25,7 @@ from Product
 join Item
 on Product.item1ID = Item.id
 
-select * from BankAcc
+select * from BankAcc where id = 1
 
 
 

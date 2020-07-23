@@ -9,11 +9,12 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Account;
+import model.Address;
+import model.BankAcc;
 import model.Brand;
 import model.Category;
 import model.Classify;
@@ -608,6 +609,52 @@ public class ProductDAO extends BaseDAO {
         return null;
     }
 
+    public BankAcc getBankAccByID(int id) {
+        try {
+            String sql = "select * from BankAcc where id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                BankAcc b = new BankAcc();
+                b.setId(id);
+                b.setHolder(rs.getString("holder"));
+                b.setNumber(rs.getString("number"));
+                b.setExpiration(rs.getString("expiration"));
+                b.setCVV(rs.getInt("CVV"));
+                b.setBank(rs.getString("bank"));
+                return b;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
+    public Address getAddressByID(int id) {
+        try {
+            String sql = "select * from Address where id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                Address b = new Address();
+                b.setId(id);
+                b.setFullname(rs.getString("fullname"));
+                b.setPhone(rs.getString("phone"));
+                b.setProvincial(rs.getString("provincial"));
+                b.setDistrict(rs.getString("district"));
+                b.setCommune(rs.getString("commune"));
+                return b;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
     public ArrayList<Order> getListOrderOnState(int accid, String state) {
         ArrayList<Order> list = new ArrayList<>();
 
@@ -624,6 +671,8 @@ public class ProductDAO extends BaseDAO {
                 order.setDate(rs.getString("date"));
                 order.setQuantity(rs.getInt("quantity"));
                 order.setState(state);
+                order.setCard(getBankAccByID(rs.getInt("cardID")));
+                order.setAddress(getAddressByID(rs.getInt("addressID")));
                 order.setImg(rs.getString("img"));
                 list.add(order);
             }
@@ -632,5 +681,51 @@ public class ProductDAO extends BaseDAO {
         }
 
         return list;
+    }
+
+    public void checkoutOrder(Order order, BankAcc card, Address address) {
+        try {
+            String sql = "update Product set quantity = quantity - ? where id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(2, order.getProduct().getId());
+            statement.setInt(1, order.getQuantity());
+            statement.executeUpdate();
+
+            sql = "update [Order] set state = ?, cardID = ?, addressID = ? where id = ?";
+            statement = connection.prepareStatement(sql);
+            statement.setString(1, "checkout");
+            statement.setInt(2, card.getId());
+            statement.setInt(3, address.getId());
+            statement.setInt(4, order.getId());
+            statement.executeUpdate();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public Order getOrderByID(int id) {
+        try {
+            String sql = "select * from [Order] where id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                Order order = new Order();
+                order.setId(rs.getInt("id"));
+                order.setProduct(getProductByID(rs.getInt("productID")));
+                order.setDate(rs.getString("date"));
+                order.setQuantity(rs.getInt("quantity"));
+                order.setState(rs.getString("state"));
+                order.setCard(getBankAccByID(rs.getInt("cardID")));
+                order.setAddress(getAddressByID(rs.getInt("addressID")));
+                order.setImg(rs.getString("img"));
+                return order;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
     }
 }
