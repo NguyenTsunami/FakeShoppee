@@ -1,0 +1,93 @@
+1. #div-classify-list
+	-> classify-default 
+		-> form-group
+		-> form-group
+		-> form-group
+			-> label: Classify
+			-> button: onclick="addClassifyGroup()"
+
+	-> classify-group
+		-> span.span-btn-close: onclick="closeClassifyGroup(this)"
+		-> label.classify-group-label: Classify Group ...
+		-> div-classify-group
+			-> div.classify-group-name
+				-> label: Classify Group Name
+				-> input: name="classify-group-1/2-name"
+			-> div  
+				-> label: Product Classify
+			-> div.classify-item
+				-> label
+				-> input: name="classify-1/2-item-name" 
+			-> div.div-add-classify-item
+				-> label
+				-> btn: onclick="addNewClassifyItem(this)"
+					-> <i>
+					-> span: Added(.../20)
+
+	-> #div-add-classify-group
+		-> label: Classify Group 2
+		-> btn: onclick="addClassifyGroup()"
+
+	-> #table-type-1/2
+		-> label
+		-> div
+		-> table.table-classify
+		-> tr>th
+		-> tr.tr-item
+			-> td.td-name colspan
+			-> td.td-name
+			-> td.td-price > input: name="price-item"
+			-> td.td-quantity > input: name="quantity-item"
+
+2. div.row
+	-> label.col-3
+	-> div.col-8
+		-> div.card-input-img-container
+			-> div.input-img-container
+				-> img.img-display: onload="loadDisplayImg(this)" 
+				-> i
+				-> input: name="imgCover" onchange="readURL(this)"
+			-> label
+
+3. div.row #classify-images
+	-> label.col-3
+	-> div.col-8
+		-> div.card-input-img-container .item-img
+			-> div.input-img-container 
+				-> img.img-display: onload="loadDisplayImg(this)" 
+				-> i
+				-> input: name="imgItem" onchange="readURL(this)"
+			-> label
+
+4. quản lý ảnh:
+folder acc_<id>
+	-> avatar.png
+	-> folder products
+		-> folder product_<id>
+			-> imgCover
+			-> img1
+			-> img2
+			-> img3
+			-> img4
+			-> img5
+			-> imgItem_+<stt>
+
+4. String name = "";
+        String description = "";
+        int categoryID = 0;
+        int brandID = 0;
+        String classify1Name = "";
+        String classify2Name = "";
+        ArrayList<String> classify1List;
+        ArrayList<String> classify2List;
+        ArrayList<Double> priceList;
+        ArrayList<Integer> quantityList;
+        String state = "";
+
+
+
+
+
+
+
+	

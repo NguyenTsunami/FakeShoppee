@@ -1,0 +1,318 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 11, 2020, 10:32:43 AM
+    Author     : thuy
+*/
+/*----------------------------------------------------*/
+.container {
+    max-width: 1400px;
+}
+
+a {
+    color: #EC6F66;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.text-tsunami {
+    color: #EC6F66;
+}
+
+.text-tsunami:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-tsunami {
+    background: #EC6F66;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EC6F66, #F3A183);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EC6F66, #F3A183); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-color: #EC6F66;
+    opacity: 0.7;
+}
+
+.btn-tsunami:hover {
+    opacity: 1;
+}
+
+.btn-classify {
+    background: white;
+    border: 1px dashed; 
+    opacity: 0.7;
+}
+
+.btn.btn-light.active {
+    color: #EC6F66 !important
+}
+
+.btn-classify:hover {
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6, #FFFFFF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    opacity: 1;
+}
+
+.div-classify-group {
+    background: #ECE9E6;  
+}
+
+.span-btn-close {
+    left: 860px;
+    z-index: 4;
+}
+
+.card-input-img-container {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.table-classify {
+    border: 1px #cccccc;
+}
+
+.table-classify tr:first-child {
+    background: #ECE9E6;
+}
+
+.table-classify tr th {
+    font-weight: normal;
+}
+
+.input-none-style {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 80%;
+    outline: none;
+}
+
+.btn-non-style {
+    border:none;
+    background: transparent;
+}
+
+.input-img-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: white;
+    border: 1px dashed; 
+    opacity: 0.7;
+}
+
+.input-img-container:hover {
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6, #FFFFFF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    opacity: 1;
+}
+
+.input-img-container input[type="file"] {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0 !important;
+    top: 0;
+    width: 100%;
+}
+
+.input-img-container i {
+    writing-mode: vertical-rl;
+    height: 100%;
+}
+
+.img-display {
+    width: 100%;
+    height: 100%;
+}
+
+.list-group-item.active {
+    border-color: #EC6F66;
+    background: #EC6F66;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EC6F66, #F3A183);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EC6F66, #F3A183); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.list-group-item:hover {
+    background: #EC6F66;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EC6F66, #F3A183);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EC6F66, #F3A183); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.5;
+}
+
+.arrow:before {
+    font-family: FontAwesome;
+    content: "\f078";
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    float: right;
+}
+
+.card-tsunami {
+    font-size: 0.75rem;
+}
+
+.card-tsunami:hover {
+    cursor: pointer;
+    background-color: #ececf6;
+    transform: scale(1.05);
+}
+
+/*----------------------------------CHECKBOX--------------------------------------------*/
+.checkbox {
+    padding-left: 20px; 
+    font-size: smaller;
+}
+.checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 5px; 
+}
+.checkbox label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out; 
+}
+.checkbox label::after {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 0;
+    margin-left: -20px;
+    padding-left: 3px;
+    /*padding-top: 1px;*/
+    font-size: 11px;
+    color: #555555; 
+}
+.checkbox input[type="checkbox"] {
+    opacity: 0; 
+}
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; 
+}
+.checkbox input[type="checkbox"]:checked + label::after {
+    font-family: 'FontAwesome';
+    content: "\f00c"; 
+}
+.checkbox input[type="checkbox"]:disabled + label {
+    opacity: 0.65; 
+}
+.checkbox input[type="checkbox"]:disabled + label::before {
+    background-color: #eeeeee;
+    cursor: not-allowed; 
+}
+.checkbox.checkbox-circle label::before {
+    border-radius: 50%; 
+}
+.checkbox.checkbox-inline {
+    margin-top: 0; 
+}
+.checkbox-tsunami input[type="checkbox"]:checked + label::before {
+    background-color: #EC6F66;
+    border-color: #EC6F66; }
+.checkbox-tsunami input[type="checkbox"]:checked + label::after {
+    color: #fff; }
+
+/*----------------------------------RADIO--------------------------------------------*/
+
+.radio {
+    padding-left: 20px; 
+    display: flex;
+    justify-content: space-around;
+}
+.radio label {
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    padding-left: 5px; 
+}
+.radio label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out; }
+.radio label::after {
+    display: inline-block;
+    position: absolute;
+    content: " ";
+    width: 11px;
+    height: 11px;
+    left: 3px;
+    top: 3px;
+    margin-left: -20px;
+    border-radius: 50%;
+    background-color: #555555;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); }
+.radio input[type="radio"] {
+    opacity: 0; }
+.radio input[type="radio"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+.radio input[type="radio"]:checked + label::after {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); }
+.radio input[type="radio"]:disabled + label {
+    opacity: 0.65; }
+.radio input[type="radio"]:disabled + label::before {
+    cursor: not-allowed; }
+.radio.radio-inline {
+    margin-top: 0; }
+
+.radio-tsunami input[type="radio"] + label::after {
+    background-color: #EC6F66; }
+.radio-tsunami input[type="radio"]:checked + label::before {
+    border-color: #EC6F66; }
+.radio-tsunami input[type="radio"]:checked + label::after {
+    background-color: #EC6F66; }
+
+

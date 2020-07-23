@@ -1,0 +1,18 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/templates/shop-homepage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+body {
+    padding-top: 56px;
+}
+
+.header, footer {
+    background: #EC6F66;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EC6F66, #F3A183);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EC6F66, #F3A183); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+

@@ -1,0 +1,77 @@
+1. Register có avatar tải lên từ máy client
+2. Login with cookie lưu sẵn
+3. Edit avatar, edit profile, change password
+4. Tạo shop riêng, edit shop info
+5. Add product: chọn category và tự động gen ra list brand
+6. Add product: classify + đăng ảnh của từng item trong classify1
+
+
+Note:
+					1. Add classify 1: 
+                                            //show
+                                            $(classify_images).find('label.col-3.col-form-label').attr('hidden', null);
+                                            $(classify_images).find('.item-img').remove();
+
+					2. Rename classify 1:
+                                            var root = $('.div-classify-group')[0];
+                                            //change name of label col-3
+                                            var classifyName = $(root).find('.classify-group-name').find('input').val();
+                                            if (classifyName === '') {
+                                                classifyName = 'Images Of Classify';
+                                            }
+                                            $(classify_images).find('label').text(classifyName);
+
+					2. Add/close classify 2/Add item/edit name/edit item in classify2: do nothing
+					
+					3. Close classify 1:
+						//hidden
+                                                $(classify_images).find('label.col-3.col-form-label').attr('hidden', true);
+                                                $(classify_images).find('.item-img').remove();
+						//if classify2 change to classify1:
+						//show
+                                            	$(classify_images).find('label.col-3.col-form-label').attr('hidden', null);
+                                           	$(classify_images).find('.item-img').remove();
+						var root = $('.div-classify-group')[0];
+                                            	//change name of label col-3
+                                            	var classifyName = $(root).find('.classify-group-name').find('input').val();
+                                            	if (classifyName === '') {
+                                                	classifyName = 'Images Of Classify';
+                                            	}
+                                            	$(classify_images).find('label').text(classifyName);
+						//add item-img
+                                            	var itemList = $(root).find('.classify-item').find('input');
+                                            	var col8 = $(classify_images).find('div');
+                                            	for (var i = 0; i < itemList.length; i++) {
+                                                	var itemName = $(itemList[i]).val();
+                                                	if (itemName === '') {
+                                                   	itemName = 'Item Image';
+                                                	}
+                                              	  var temp = item_img.clone();
+                                              	  temp.find('label').text(itemName);
+                                              	  temp.appendTo(col8);
+                                            	}
+                                           	 loadDisplayImg($('.img-display'));
+
+					4. add input item in classify 1:
+						var col8 = $(classify_images).find('div');
+						var stt = $($('.classify-group')[0]).find('.classify-item').length+1;
+						var temp = item_img.clone();
+                                                temp.attr('data-img',".item-img-"+stt);
+                                                temp.appendTo(col8);
+                                               
+					
+					5. rename input item in classify 1:
+						var itemList = $(root).find('.classify-item').find('input');
+                                            var col8 = $(classify_images).find('div');
+                                            for (var i = 0; i < itemList.length; i++) {
+                                                var itemName = $(itemList[i]).val();
+                                                if (itemName === '') {
+                                                    itemName = 'Item Image';
+                                                }
+                                                var temp = item_img.clone();
+                                                temp.find('label').text(itemName);
+                                                temp.appendTo(col8);
+                                            }
+                                            loadDisplayImg($('.img-display'));
+
+						

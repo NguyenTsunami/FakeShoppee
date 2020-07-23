@@ -1,0 +1,22 @@
+1. bảng classify
+2. servlet add product
+3. show product info
+4. show list product
+5. search
+6. Thống kê
+7. cart and checkout
+8. rating
+9. all address
+10. all bank account
+11. comment
+12. tinh chỉnh: in classify: tất cả các giá trị item phải khác nhau
+13. tinh chỉnh: thêm vào addproduct general price&quantity -> add vào database phần ProductGroup
+14. tinh chỉnh: price & quantity datatype: double & int
+15. tinh chỉnh: imge k để thiếu, nếu thiếu thì khi hiện info product sẽ có src không phù hợp
+16. Xóa product
+17. nếu add product lỗi, tinh chỉnh lại dữ liệu
+18. History
+19. Best Seller
+20. Best Interest Rate
+21. Khách hàng tiềm năng
+22. Ngày tháng đăng sản phẩm
