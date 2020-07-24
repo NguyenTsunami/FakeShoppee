@@ -2,22 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/web/index.jsp</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/web/addproduct.jsp</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/web/productgroup.jsp</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/src/java/model/Order.java</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/web/oncart.jsp</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/src/java/controller/LoginServlet.java</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/web/myaccount.jsp</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/web/listall.jsp</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/web/js/productgroupJS.js</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/web/checkout.jsp</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/web/css/tsunamiStyle.css</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/src/java/dal/ProductDAO.java</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/src/java/controller/AddOrderServlet.java</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/src/java/controller/CheckOutServlet.java</file>
-            <file>file:/E:/SUM20/PRJ321/Tsunami/src/java/model/Product.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
